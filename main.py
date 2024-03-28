@@ -11,7 +11,7 @@ from request import ask_openai
 async def main():
     while True:  # 无限循环
         now = datetime.datetime.now()
-        if now.hour == 16:
+        if now.hour == 18:
             question = get_random_hot()
         elif now.hour == 10:
             question = ""
