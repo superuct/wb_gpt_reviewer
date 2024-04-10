@@ -11,9 +11,9 @@ from request import ask_openai
 async def main():
     while True:  # 无限循环
         now = datetime.datetime.now()
-        if now.hour == 18:
+        if now.hour == int(os.environ.get('HOTS')):
             question = get_random_hot()
-        elif now.hour == 10:
+        elif now.hour == int(os.environ.get('GENKI')):
             question = ""
         else:
             time.sleep(3600)
